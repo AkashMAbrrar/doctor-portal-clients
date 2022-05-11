@@ -8,7 +8,7 @@ const MakeAppointment = () => {
         <section style={{
             background: `url(${backApp})`
         }}
-            className='flex pt-10 justify-center items-center mt-28'>
+            className='flex pt-10 justify-center items-center my-28 p-2'>
             <div className='flex-1 hidden lg:block'>
                 <img className='mt-[-100px]' src={doctor} alt="" />
             </div>
