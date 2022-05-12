@@ -1,21 +1,37 @@
-import React from 'react';
+import React from "react";
 import shadow from '../../../assets/images/appointment.png';
+import MainButton from '../../Shared/MainButton';
 
 const Form = () => {
     return (
-        <section className='align-middle'>
-            <h2 className='text-primary text-center font-bold'>Contact Us</h2>
-            <h1 className='text-center text-3xl font-bold'>Stay Connected With Us</h1>
-            <form style={{
-                background: `url(${shadow})`
-            }}>
-                <input className='w-50' type="email" name="email" id="" placeholder='Your Email' />
-                <br />
-                <input type="text" name="text" id="" placeholder='Subject' />
-                <br />
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-            </form>
-        </section>
+        <div style={{
+            background: `url(${shadow})`
+        }} className='bg-primary px-10 py-14 '>
+            <div className='text-center pb-14 text-white'>
+                <p className='text-xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-accent to-secondary'>
+                    Contact Us
+                </p>
+                <h1 className='text-4xl'>Stay connected with us</h1>
+            </div>
+            <div className='grid grid-cols-1 justify-items-center gap-5'>
+                <input
+                    type='text'
+                    placeholder='Email Address'
+                    className='input w-full max-w-md'
+                />
+                <input
+                    type='text'
+                    placeholder='Subject'
+                    className='input w-full max-w-md'
+                />
+                <textarea
+                    className='textarea w-full max-w-md'
+                    placeholder='Your message'
+                    rows={6}
+                ></textarea>
+                <MainButton>Submit</MainButton>
+            </div>
+        </div>
     );
 };
 
