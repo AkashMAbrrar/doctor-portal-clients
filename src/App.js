@@ -16,10 +16,11 @@ import MyHistory from './Page/Dashboard/MyHistory';
 import Users from './Page/Dashboard/Users';
 import AddDoctor from './Page/Dashboard/AddDoctor';
 import RequireAuthAdmin from './Page/Login/RerquireAuthAdmin';
+import ManageDoctors from './Page/Dashboard/ManageDoctors';
 
 function App() {
   return (
-    <div className='max-w-7xl mx-auto px-12'>
+    <div className='max-w-7xl mx-auto px-6'>
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
@@ -39,6 +40,7 @@ function App() {
           <Route path='history' element={<MyHistory></MyHistory>}></Route>
           <Route path='users' element={<RequireAuthAdmin><Users></Users></RequireAuthAdmin>}></Route>
           <Route path='addDoctor' element={<RequireAuthAdmin><AddDoctor></AddDoctor></RequireAuthAdmin>}></Route>
+          <Route path='manageDoctors' element={<RequireAuthAdmin><ManageDoctors></ManageDoctors></RequireAuthAdmin>}></Route>
         </Route>
 
         <Route path='login' element={<Login></Login>}></Route>
